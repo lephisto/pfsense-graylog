@@ -3,5 +3,6 @@ FROM graylog/graylog:3.1
 USER root
 RUN mkdir -pv /etc/graylog/server/
 COPY ./getGeo.sh /etc/graylog/server/
+COPY ./service-names-port-numbers.csv /etc/graylog/server/
 RUN chmod +x /etc/graylog/server/getGeo.sh && /etc/graylog/server/getGeo.sh
 USER graylog
