@@ -30,7 +30,6 @@ services:
       context: ./graylog/.
     volumes:
       - graylog_journal:/usr/share/graylog/data/journal
-      - ./service-names-port-numbers.csv:/etc/graylog/server/service-names-port-numbers.csv
     env_file:
       - ./graylog.env
     links:
