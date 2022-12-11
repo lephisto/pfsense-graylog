@@ -8,11 +8,11 @@ This doc has been tested with the following Versions:
 
 | Component           | Version                | 
 | -------------         |:---------------------: 
-| Elasticsearch     | 7.11.1 |
-| Grafana | 7.4.2 |
-| Graylog | 4.0.3 |
+| Elasticsearch     | 7.17.8 |
+| Grafana | 9.2.4  |
+| Graylog | 4.2.8 |
 | Cerebro | 0.9.3 | 
-| pfSense | 2.5.0 CE|
+| pfSense | 2.6.0 CE|
 
 
 If it's easier for you, you can find a video guide here:  https://youtu.be/uOfPzueH6MA (Still the Guide for GL3/ES6, will make a new one some day.)
