@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
 
@@ -10,7 +10,7 @@ services:
 
   # Elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/6.x/docker.html
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.8
     mem_limit: 4g
     restart: always
     volumes:
@@ -59,7 +59,7 @@ services:
 
   # Kibana : https://www.elastic.co/guide/en/kibana/6.8/index.html
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.11.1
+    image: docker.elastic.co/kibana/kibana:7.17.8
     entrypoint: ["echo", "Service Kibana disabled"]
     env_file:
       - kibana.env
@@ -82,7 +82,7 @@ services:
         max-size: "100M"
 
   influxdb:
-    image: 'influxdb:latest'
+    image: 'influxdb:1.8.4-alpine'
     env_file:
       - ./influxdb.env
     ports:
@@ -95,7 +95,7 @@ services:
         max-size: "100M"
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana-enterprise:latest
     env_file:
       - ./grafana.env
     ports:
